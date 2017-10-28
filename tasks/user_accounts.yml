@@ -3,6 +3,7 @@
   shell: awk '/^\s*UID_MIN\s*([0-9]*).*?$/ {print $2}' /etc/login.defs
   args:
     removes: /etc/login.defs
+    executable: /bin/sh
   register: uid_min
   check_mode: False
   changed_when: False

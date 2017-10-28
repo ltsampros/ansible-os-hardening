@@ -11,6 +11,8 @@
 
 - name: get yum-repository-files
   shell: 'find /etc/yum.repos.d/ -type f -name *.repo'
+  args:
+      executable: /bin/sh
   changed_when: False
   register: yum_repos
 
